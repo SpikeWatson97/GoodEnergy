@@ -24,4 +24,10 @@
     <ProjectReference Include="..\Configuration\Configuration.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="Screenshot %281%29.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
