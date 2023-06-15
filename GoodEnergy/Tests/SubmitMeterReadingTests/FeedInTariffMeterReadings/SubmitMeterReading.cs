@@ -1,9 +1,11 @@
 ﻿using NUnit.Framework;
+using Tests.Constants;
 using Tests.POM.MeterReading;
 using Tests.POM.MeterReading.Results;
 
 namespace Tests.SubmitMeterReadingTests.FeedInTariffMeterReadings
 {
+    [Parallelizable]
     public class SubmitMeterReading : TestBase
     {
         private readonly MeterReadingLandingPage _meterReadingLandingPage;
@@ -22,7 +24,7 @@ namespace Tests.SubmitMeterReadingTests.FeedInTariffMeterReadings
         [Test]
         public void SubmitMeterReadingAndVerify()
         {
-            _meterReadingLandingPage.ClickMeterReadingTypeButtonAndClickNext("Feed-in Tariff");
+            _meterReadingLandingPage.ClickMeterReadingTypeButtonAndClickNext(MeterReadingTypes.FeedInTariff);
             _aboutYouPage.CompleteAboutYouForm("Jim", "fakeemail@outlook.com", "NR5 6RX");
             _aboutYouPage.NextButton.Click();
             _submitTariffReadingPage.CompleteSubmitReadingForm(DateTime.Now.ToString("dd"), DateTime.Now.ToString("MMMM"),

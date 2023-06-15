@@ -1,4 +1,4 @@
-﻿namespace Tests
+﻿namespace Tests.Constants
 {
     public static class ValidationMessageConstants
     {

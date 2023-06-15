@@ -1,4 +1,5 @@
 ﻿using NUnit.Framework;
+using Tests.Constants;
 using Tests.POM.MeterReading;
 
 namespace Tests.SubmitMeterReadingTests.ElectricityMeterReadings
@@ -20,7 +21,7 @@ namespace Tests.SubmitMeterReadingTests.ElectricityMeterReadings
         [Test(Description = "Tests to ensure meter reading cannot be submitted when validation message is displayed")]
         public void VerifyInvalidAccountNumberErrorMessage()
         {
-            _meterReadingLandingPage.ClickMeterReadingTypeButtonAndClickNext("Electricity");
+            _meterReadingLandingPage.ClickMeterReadingTypeButtonAndClickNext(MeterReadingTypes.Electricity);
             _aboutYouPage.CompleteAboutYouForm("Jim", "fakeemail@outlook.com", "NR5 6RX");
             _aboutYouPage.NextButton.Click();
             _submitElectricityReadingPage.CompleteSubmitElectricityReadingForm(DateTime.Now.ToString("dd"), DateTime.Now.ToString("MMMM"),

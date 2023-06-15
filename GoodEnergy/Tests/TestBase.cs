@@ -10,9 +10,12 @@ namespace Tests
     {
         protected readonly IWebDriver _driver;
 
+        /// <summary>
+        /// Every time class is derived a fresh webdriver instance is created
+        /// </summary>
         public TestBase()
         {
-            _driver = new WebdriverFactory().CreateWebDriver();
+            _driver = WebdriverFactory.CreateWebDriver();
         }
 
         /// <summary>

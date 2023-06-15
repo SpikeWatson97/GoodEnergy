@@ -7,7 +7,7 @@ using TestParameters = Configuration.TestRunParameters.TestParameters;
 
 namespace Configuration.WebdriverCreation
 {
-    public class WebdriverFactory
+    public static class WebdriverFactory
     {
         private const string _windowSize = "window-size=1920,1080";
         private const string _windowBehaviour = "--kiosk";
@@ -15,7 +15,7 @@ namespace Configuration.WebdriverCreation
 
         private static readonly string _path = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
 
-        public IWebDriver CreateWebDriver()
+        public static IWebDriver CreateWebDriver()
         {
             return TestParameters.Browser.ToLower() switch
             {
