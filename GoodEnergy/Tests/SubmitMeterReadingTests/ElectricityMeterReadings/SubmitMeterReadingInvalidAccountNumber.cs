@@ -1,16 +1,16 @@
 ﻿using NUnit.Framework;
 using Tests.POM.MeterReading;
 
-namespace Tests.SubmitMeterReadingTests
+namespace Tests.SubmitMeterReadingTests.ElectricityMeterReadings
 {
     [Parallelizable]
-    public class SubmitElectricityMeterReadingInvalidAccountNumber : TestBase
+    public class SubmitMeterReadingInvalidAccountNumber : TestBase
     {
         private readonly MeterReadingLandingPage _meterReadingLandingPage;
         private readonly AboutYouPage _aboutYouPage;
         private readonly SubmitElectricityReadingPage _submitElectricityReadingPage;
 
-        public SubmitElectricityMeterReadingInvalidAccountNumber()
+        public SubmitMeterReadingInvalidAccountNumber()
         {
             _meterReadingLandingPage = new MeterReadingLandingPage(_driver);
             _aboutYouPage = new AboutYouPage(_driver);

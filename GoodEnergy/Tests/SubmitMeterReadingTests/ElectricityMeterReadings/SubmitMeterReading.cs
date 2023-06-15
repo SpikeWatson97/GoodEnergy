@@ -2,16 +2,16 @@
 using Tests.Helpers;
 using Tests.POM.MeterReading;
 
-namespace Tests.SubmitMeterReadingTests
+namespace Tests.SubmitMeterReadingTests.ElectricityMeterReadings
 {
     [Parallelizable]
-    public class SubmitElectricityMeterReading : TestBase
+    public class SubmitMeterReading : TestBase
     {
         private readonly MeterReadingLandingPage _meterReadingLandingPage;
         private readonly AboutYouPage _aboutYouPage;
         private readonly SubmitElectricityReadingPage _submitElectricityReadingPage;
 
-        public SubmitElectricityMeterReading()
+        public SubmitMeterReading()
         {
             _meterReadingLandingPage = new MeterReadingLandingPage(_driver);
             _aboutYouPage = new AboutYouPage(_driver);
@@ -19,7 +19,7 @@ namespace Tests.SubmitMeterReadingTests
         }
 
         [Test]
-        public void SubmitElectricityMeterReadingAndVerify()
+        public void SubmitMeterReadingAndVerify()
         {
             _meterReadingLandingPage.ClickMeterReadingTypeButtonAndClickNext("Electricity");
             _aboutYouPage.CompleteAboutYouForm("Jim", "fakeemail@outlook.com", "NR5 6RX");
